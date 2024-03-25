@@ -26,7 +26,7 @@ async def root() -> dict:
     return {"message": "Hello 👋"}
 
 
-@app.post("/api/v1/prediction")
+@app.post("/api/prediction")
 async def prediction(
     output: PredictionOutput = Depends(model.predict),
 ) -> PredictionOutput:
